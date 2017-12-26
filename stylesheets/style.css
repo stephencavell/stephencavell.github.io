@@ -4,6 +4,7 @@ html, body {
   font-family: 'Merriweather' , serif; }
 
 .header {
+  border-bottom-style: solid;
   border-color: black;
   margin: 50px; }
 
