@@ -1,7 +1,7 @@
 /*scss stylesheet*/
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
 html, body {
-  font-family: 'Merriweather' , serif; }
+  font: 100% Merriweather, serif; }
 
 .header {
   border-bottom-style: solid;
@@ -13,6 +13,12 @@ html, body {
   margin-left: 100px;
   margin-right: 100px;
   margin-bottom: 50px;
-  max-width: 750px; }
+  max-width: 750px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+
+.sec_header {
+  color: #67a2bf; }
 
 /*# sourceMappingURL=style.css.map */

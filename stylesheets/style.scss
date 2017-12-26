@@ -2,8 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 
+//VARIABLES
+
+    //Font
+$font-stack: Merriweather, serif;
+
+    //Colors
+$primary-color: #748c69;
+$secondary-color: #b9ff99;
+$light_blue: #67a2bf;
+
+
 html, body {
-    font-family: 'Merriweather' , serif;
+    font: 100% $font-stack;
 }
 
 .header {
@@ -19,4 +30,12 @@ html, body {
     margin-bottom: 50px;
     
     max-width: 750px;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sec_header {
+    color: $light_blue;
 }
