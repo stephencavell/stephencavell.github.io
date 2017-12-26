@@ -3,4 +3,8 @@
 html, body {
   font-family: 'Merriweather' , serif; }
 
+.header {
+  border-color: black;
+  margin: 50px; }
+
 /*# sourceMappingURL=style.css.map */
