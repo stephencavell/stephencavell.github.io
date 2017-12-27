@@ -39,3 +39,13 @@ html, body {
 .sec_header {
     color: $light_blue;
 }
+
+#links {
+    display: flex;
+    justify-content: center;
+    
+    a {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}

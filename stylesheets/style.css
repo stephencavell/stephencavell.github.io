@@ -21,4 +21,11 @@ html, body {
 .sec_header {
   color: #67a2bf; }
 
+#links {
+  display: flex;
+  justify-content: center; }
+  #links a {
+    padding-left: 50px;
+    padding-right: 50px; }
+
 /*# sourceMappingURL=style.css.map */
