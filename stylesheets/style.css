@@ -1,31 +1,42 @@
 /*scss stylesheet*/
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
-html, body {
+html {
   font: 100% Merriweather, serif; }
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: inherit;
+  margin: 0; }
 
 .header {
   border-bottom-style: solid;
-  border-color: black;
-  margin: 50px; }
+  border-color: black; }
+  .header h1 {
+    padding: 10px;
+    margin: 0; }
 
-.body {
-  margin-top: 50px;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 50px;
+.resume {
+  margin-left: 50px;
+  margin-right: 50px;
   max-width: 750px;
   display: flex;
-  justify-content: center;
-  flex-direction: column; }
+  justify-content: space-around;
+  flex-direction: column;
+  align-self: center; }
 
 .sec_header {
   color: #67a2bf; }
 
-#links {
+.title_info p {
+  margin: 0; }
+.title_info .duration {
+  font-size: 14px; }
+
+#contact_info {
+  background-color: dimgrey;
   display: flex;
-  justify-content: center; }
-  #links a {
-    padding-left: 50px;
-    padding-right: 50px; }
+  justify-content: space-evenly; }
 
 /*# sourceMappingURL=style.css.map */
