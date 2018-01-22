@@ -1,42 +1,149 @@
 /*scss stylesheet*/
-@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
-html {
-  font: 100% Merriweather, serif; }
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i");
+html, body {
+  font: 100% "Source Sans Pro", sans-serif;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
 
-body {
+.hero {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
-  flex-direction: column;
-  width: inherit;
-  margin: 0; }
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 100px;
+  background: linear-gradient(to bottom right, #757e91, #3a3b3d);
+  border-bottom: solid grey 1px; }
+  @media (max-width: 750px) {
+    .hero {
+      padding: 100px 10px; } }
 
-.header {
-  border-bottom-style: solid;
-  border-color: black; }
-  .header h1 {
-    padding: 10px;
-    margin: 0; }
+.img-container {
+  -webkit-flex-shrink: 0;
+  -moz-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  float: left;
+  max-width: 200px;
+  height: auto; }
+  .img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; }
 
-.resume {
-  margin-left: 50px;
-  margin-right: 50px;
-  max-width: 750px;
+.hero-text {
+  -webkit-flex-shrink: 1;
+  -moz-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  max-width: 20rem;
+  margin: 0rem 2rem;
+  text-align: center;
+  color: #d7dbe2; }
+  .hero-text h1, .hero-text p {
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0; }
+
+.section {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center; }
+
+.container {
+  width: 66%;
+  max-width: 700px; }
+  @media (max-width: 750px) {
+    .container {
+      width: 80%; } }
+
+.nav {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
   justify-content: space-around;
-  flex-direction: column;
-  align-self: center; }
+  -ms-flex-pack: space-around; }
 
-.sec_header {
-  color: #67a2bf; }
+.nav-button {
+  padding: .5rem 1rem;
+  border-bottom: solid grey 1px;
+  color: #333333; }
 
-.title_info p {
-  margin: 0; }
-.title_info .duration {
-  font-size: 14px; }
-
-#contact_info {
-  background-color: dimgrey;
+.container-view {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  justify-content: space-evenly; }
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  min-height: 300px;
+  border-left: solid grey 1px;
+  border-right: solid grey 1px;
+  margin-bottom: 50px; }
+  .container-view div {
+    margin: 0px;
+    text-align: center;
+    color: #333333; }
+
+.row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
+#github, #linkedin {
+  max-width: 40px;
+  margin: 20px; }
+  #github img, #linkedin img {
+    max-width: 100%;
+    height: auto; }
 
 /*# sourceMappingURL=style.css.map */

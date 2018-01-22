@@ -1,78 +1,146 @@
 /*scss stylesheet*/
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
-
+//Imports
+@import 'flexbox';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i');
 //VARIABLES
 
-    //Font
-$font-stack: Merriweather, serif;
-
-    //Colors
-$primary-color: #748c69;
-$secondary-color: #b9ff99;
-$light_blue: #67a2bf;
+//Font
+$font-stack: 'Source Sans Pro', sans-serif;
 
 
-html {
+//MIXINS
+
+//transition mixin
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+html, body {
     font: 100% $font-stack;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: inherit;
+    width: 100%;
+    padding: 0;
     margin: 0;
+    //height: 100%;
     
 }
 
-.header {
-    border-bottom-style: solid;
-    border-color: black;
+//page header/banner thing with my photo and title
+.hero {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-wrap(wrap);
     
-    h1 {
-        padding: 10px;
-        margin: 0;
+    padding: 100px;
+    
+    //color: #2d2c2c;
+    
+    @media (max-width: 750px) {
+        padding: 100px 10px;
+    }
+    
+    background: linear-gradient(to bottom right, #757e91, #3a3b3d);
+    border-bottom: solid grey 1px;
+}
+
+.img-container {
+    @include flex-shrink(0);
+    
+    float: left;
+    max-width: 200px;
+    height: auto;
+    
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
     }
 }
 
-.resume {
-    //margins
-    margin-left: 50px;
-    margin-right: 50px;
+.hero-text {
+    @include flex-shrink(1);
+    max-width: 20rem;
+    margin: 0rem 2rem;
     
-    //width
-    max-width: 750px;
+    text-align: center;
+    color: #d7dbe2;
     
-    //flex display
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-self: center;
+    h1, p {
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+        
+    
+    } 
 }
 
-.sec_header {
-    color: $light_blue;
+
+
+.section {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
 }
 
-.title_info {
-    p {
-        margin: 0;
+.container {
+    width: 66%;
+    max-width: 700px;
+    
+    @media (max-width: 750px) {
+        width: 80%;
     }
+}
+
+.nav {
+    @include flexbox();
+    @include justify-content(space-around);
+}
+
+.nav-button {
+    padding: .5rem 1rem;
+    border-bottom: solid grey 1px;
+    color: #333333;
+    //cursor:pointer;
+}
+
+
+.container-view {
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
     
-    .duration {
-        font-size: 14px;
+    min-height: 300px;
+    
+    border-left: solid grey 1px;
+    border-right: solid grey 1px;
+    
+    margin-bottom: 50px;
+    
+    div {
+        margin: 0px;
+        text-align: center;
+        color: #333333;
     }
 }
 
-#contact_info {
-    background-color: dimgrey;
-
-    display: flex;
-    justify-content: space-evenly;
+//create a center oriented row box, used for links
+.row {
+    @include flexbox();
+    @include justify-content(center);
 }
 
-
-
-
-
+//set img link sizes for github/linkedin
+#github, #linkedin {
+    max-width: 40px;
+    margin: 20px;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
