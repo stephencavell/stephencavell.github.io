@@ -1,48 +1,148 @@
-/*
-Error: Invalid CSS after "...+Pro:400,400i")": expected media query list, was ";"
-        on line 2 of style.css
+/*scss stylesheet*/
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i");
+html, body {
+  font: 100% "Source Sans Pro", sans-serif;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
 
-1: /*scss stylesheet*\/
-2: @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i");
-3: html, body {
-4:   font: 100% "Source Sans Pro", sans-serif;
-5:   width: 100%;
-6:   padding: 0;
-7:   margin: 0; }
+.hero {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 100px;
+  border-bottom: solid grey 1px; }
+  @media (max-width: 750px) {
+    .hero {
+      padding: 100px 10px; } }
 
-Backtrace:
-style.css:2
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:1278:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:1208:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:74:in `parse_media_query_list'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:1065:in `parse_import_arg'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:1024:in `block in parse_import_directive'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:1023:in `loop'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:1023:in `parse_import_directive'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:838:in `parse_directive'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:655:in `parse_line'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:540:in `build_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:559:in `block in append_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:558:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:558:in `append_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:417:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/plugin/compiler.rb:294:in `watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/plugin.rb:109:in `method_missing'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...+Pro:400,400i\")\": expected media query list, was \";\"\A         on line 2 of style.css\A \A 1: /*scss stylesheet*/\A 2: @import url(\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i\");\A 3: html, body {\A 4:   font: 100% \"Source Sans Pro\", sans-serif;\A 5:   width: 100%;\A 6:   padding: 0;\A 7:   margin: 0; }"; }
+.img-container {
+  -webkit-flex-shrink: 0;
+  -moz-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  float: left;
+  max-width: 200px;
+  height: auto; }
+  .img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; }
+
+.hero-text {
+  -webkit-flex-shrink: 1;
+  -moz-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  max-width: 20rem;
+  margin: 0rem 2rem;
+  text-align: center;
+  color: #d7dbe2; }
+  .hero-text h1, .hero-text p {
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0; }
+
+.section {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center; }
+
+.container {
+  width: 66%;
+  max-width: 700px; }
+  @media (max-width: 750px) {
+    .container {
+      width: 80%; } }
+
+.nav {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: space-around; }
+
+.nav-button {
+  padding: .5rem 1rem;
+  border-bottom: solid grey 1px;
+  color: #333333; }
+
+.container-view {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  min-height: 300px;
+  border-left: solid grey 1px;
+  border-right: solid grey 1px;
+  margin-bottom: 50px; }
+  .container-view div {
+    margin: 0px;
+    text-align: center;
+    color: #333333; }
+
+.row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
+#github, #linkedin {
+  max-width: 40px;
+  margin: 20px; }
+  #github img, #linkedin img {
+    max-width: 100%;
+    height: auto; }
+
+/*# sourceMappingURL=style.css.map */
